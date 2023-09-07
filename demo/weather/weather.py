@@ -4,6 +4,8 @@ from urllib import request
 
 from ..config import config
 
+class InvalidCoordinatesError(RuntimeError):
+    """Error generated if invalid Coordinates input is provided."""
 
 def get_weather_forecast(coords):
     try:
@@ -29,5 +31,5 @@ def get_weather_forecast(coords):
 
         return forecast
     except Exception as e:
-        raise e
+        raise InvalidCoordinatesError('Weather forecast for invalid coordinates not supported') 
 
