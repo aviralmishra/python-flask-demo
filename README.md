@@ -21,3 +21,4 @@ This application uses Python as the core framework and Flask for services.
 * cd to "services" directory
 * flask --app services run
 * http://127.0.0.1:5000
+* http://127.0.0.1:5000/weather
